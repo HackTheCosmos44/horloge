@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "digital";
+  src: url("../fonts/TickingTimebombBB.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+main .clock-container {
+  border: 1px solid grey;
+  width: 90%;
+  height: 17rem;
+  background-color: rgb(211, 215, 216);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .clock-container h1 {
+  font-size: 0.5rem;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+main .clock-container .screen {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid black;
+  height: 100%;
+  position: relative;
+  background-color: rgb(193, 209, 209);
+  font-family: "digital";
+  font-weight: bold;
+}
+main .clock-container .screen .up {
+  display: flex;
+  font-size: 4rem;
+  position: relative;
+}
+main .clock-container .screen .up .seconds {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: -2rem;
+}
+main .clock-container .screen .up .am-pm {
+  position: absolute;
+  top: -0.5rem;
+  right: -4rem;
+  font-size: 2rem;
+}
+main .clock-container .screen .line {
+  height: 2px;
+  width: 95%;
+  background-color: black;
+}
+main .clock-container .screen .down {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "t d h";
+  width: 90%;
+}
+main .clock-container .screen .down .temps {
+  grid-area: t;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .clock-container .screen .down .date {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main .clock-container .screen .down .date:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  top: 0rem;
+  left: 0;
+}
+main .clock-container .screen .down .date:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  top: 0 rem;
+  right: 0;
+}
+main .clock-container .screen .down .humidity {
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .clock-container .screen .down .fz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+main .clock-container .screen .down .fz .medium {
+  font-size: 0.7rem;
+}
+main .clock-container .screen .down .fz .small {
+  font-size: 0.7rem;
+}
+main .clock-container .settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+main .clock-container .settings .hp {
+  display: flex;
+  gap: 0.5rem;
+}
+main .clock-container .settings .hp .hp-line {
+  height: 1.2rem;
+  width: 0.2rem;
+  background-color: black;
+  border-radius: 2px;
+}
+main .clock-container .settings .ams {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+main .clock-container .settings .btns {
+  border: 1px solid rgb(163, 161, 158);
+  background-color: rgb(213, 218, 221);
+  display: flex;
+  align-items: center;
+  padding: 0.1rem 0.3rem;
+  position: relative;
+}
+main .clock-container .settings .btns .btn {
+  border: 1px solid rgb(100, 97, 97);
+  background-color: transparent;
+  width: 2rem;
+  height: 0.7rem;
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
